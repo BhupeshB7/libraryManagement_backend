@@ -1,0 +1,11 @@
+
+
+### create a new user
+POST http://localhost:3000/api/v1/users/add
+Content-Type: application/json
+{
+  "name": "Jo",           // Too short (min 3)
+  "email": "invalidEmail", // Invalid format
+  "password": "123",       // Too short, missing upper/lower/special
+  "role": "guest"          // Invalid enum value
+}
